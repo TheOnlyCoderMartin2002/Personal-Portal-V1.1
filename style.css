@@ -1,0 +1,213 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  font-family: monospace, Arial;
+  font-weight: bold;
+}
+
+h3 {
+  padding: 3px;
+  margin: 0 0 5px 0;
+  font-family: monospace, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+body {
+  background-color: darkblue;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.root-container {
+  background-color: darkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  margin: auto;
+  width: 400px;
+  height: 300px;
+  border: 2px solid lime;
+  border-radius: 8px;
+}
+
+.pin-access-panel {
+  background-color: blue;
+  padding: 10px;
+  margin: auto;
+  width: 90%;
+  height: fit-content;
+  display: block;
+  border: 2px solid lime;
+  border-radius: 8px;
+}
+
+.pin-access-inp {
+  background-color: black;
+  display: block;
+  padding: 5px;
+  margin: auto;
+  width: 50%;
+  height: 40px;
+  border: 2px solid yellow;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: monospace;
+  color: yellow;
+}
+
+.info-par {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: monospace;
+  font-style: italic;
+  color: whitesmoke;
+  text-align: center;
+  margin: 10px 0 0 0;
+}
+
+.num-key-panel {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: auto;
+  width: 90%;
+  height: fit-content;
+  border: 2px solid lime;
+  border-radius: 8px;
+}
+
+.num-btn {
+  background-color: black;
+  border: none;
+  margin: 3px;
+  width: 70px;
+  height: 35px;
+  color: whitesmoke;
+  padding: 5px;
+  border-radius: 7px;
+  font-size: 17px;
+  font-weight: bold;
+  font-family: cursive, Helvetica, sans-serif;
+  cursor: pointer;
+  box-shadow: 2px 2px;
+}
+.num-btn:hover {
+  background-color: blueviolet;
+  padding: 7px;
+  box-shadow: 2px 2px black;
+  
+}
+.num-btn:active {
+  background-color: white;
+  color: black;
+}
+
+.pin-control-panel {
+  background-color: black;
+  padding: 10px;
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  border: 2px solid lime;
+  border-radius: 10px;
+}
+
+.pin-control-btn {
+  background-color: blueviolet;
+  padding: 7px;
+  color: whitesmoke;
+  margin: 5px;
+  border: none;
+  box-shadow: 2px 2px white;
+  border-radius: 10px;
+  width: 120px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: monospace, Arial, sans-serif;
+}
+
+.pin-control-btn:hover {
+  background-color: lightskyblue;
+  padding: 10px;
+  margin: 0 7px 0 7px;
+  color: black;
+}
+
+.pin-control-btn:active {
+  background-color: blueviolet;
+  color: aliceblue;
+  padding: 10px;
+}
+
+.welcome-panel {
+  text-align: center;
+  background-color: darkgoldenrod;
+  width: 95%;
+  height: fit-content;
+  display: block;
+  margin: auto;
+  padding: 5px;
+  border: 2px solid lime;
+  border-radius: 10px;
+}
+
+.main-option-menu {
+  background-color: lightslategrey;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 95%%;
+  height: 150px;
+  margin: auto;
+  border-radius: 10px;
+  border: 2px solid lime;
+}
+
+.option-block {
+  width: fit-content;
+  height: fit-content;
+  color: aliceblue;
+  background-color: purple;
+  padding: 10px;
+  margin: 3px;
+  border: 2px solid gray;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: monospace, Arial;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px aliceblue;
+}
+
+.option-block:hover {
+  background-color: blueviolet;
+  color: whitesmoke;
+  padding: 12px;
+}
+
+.option-block:active {
+  background-color: maroon;
+  color: yellow;
+  padding: 12px;
+}
