@@ -44,11 +44,8 @@ function calcJot() {
     document.getElementById("root-container").style.height = "600px";
     MAIN_OPTION_MENU.style.display = "none";
 
-    let projectDisplay = document.createElement("a");
-    projectDisplay.style.width = "100%";
-    projectDisplay.style.height = "100%";
-    projectDisplay.setAttribute("id", "project-display");
-    projectDisplay.setAttribute("src", "CalcJot1.7.html");                           
+    let projectDisplay = document.createElement("iframe");
+    projectDisplay.innerHTML = "Calc & Jot 1.7");
+    projectDisplay.setAttribute("src", "calcjot1.7.html");
     WELCOME_PANEL.appendChild(projectDisplay);
-    
 }
