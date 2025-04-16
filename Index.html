@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Personal Portal</title>
+  </head>
+  <body>
+    <div class="root-container">
+      <h3>PERSONAL PORTAL |V1.1|</h3>
+      <div id="pin-access-panel" class="pin-access-panel">
+        <input type="number" id="pin-access-inp" class="pin-access-inp" placeholder="****">
+        <p class="info-par" id="info-par">ENTER THE 4-DIGIT PASSKEY PROVIDED BY CREATOR |Multiverse|</p>
+      </div>
+      <div id="num-key-panel" class="num-key-panel">
+        <button onclick="PIN_ACCESS_INP.value += '1' " class="num-btn" value="1">1</button>
+        <button onclick="PIN_ACCESS_INP.value += '2' " class="num-btn" value="2">2</button>
+        <button onclick="PIN_ACCESS_INP.value += '3' " class="num-btn" value="3">3</button>
+        <br>
+        <button onclick="PIN_ACCESS_INP.value += '4' " class="num-btn" value="4">4</button>
+        <button onclick="PIN_ACCESS_INP.value += '5' " class="num-btn" value="5">5</button>
+        <button onclick="PIN_ACCESS_INP.value += '6' " class="num-btn" value="6">6</button>
+        <br>
+        <button onclick="PIN_ACCESS_INP.value += '7' " class="num-btn" value="7">7</button>
+        <button onclick="PIN_ACCESS_INP.value += '8' " class="num-btn" value="8">8</button>
+        <button onclick="PIN_ACCESS_INP.value += '9' " class="num-btn" value="9">9</button>
+        <button onclick="PIN_ACCESS_INP.value += '0' " class="num-btn" value="0">0</button>
+      </div>
+      <div id="welcome-panel" class="welcome-panel" style="display: none">
+        <h2 id="h2-1">WELCOME TO YOUR PORTAL</h2>
+        <p class="info-par" id="info-par-2">This program is in-development & will turn out to be a helpful multitool!</p>
+        <button onclick="closeWelcomePanel()" id="close-welcome-panel" class="pin-control-btn">CONTINUE >>></button>
+        <div id="main-option-menu" class="main-option-menu" style="display: none">
+          <button class="option-block">PROJECTS</button><br>
+          <button class="option-block">MUSIC</button>
+          <button class="option-block">PORTAL INFO</button>
+      </div>
+      </div>
+    </div>
+    <div id="pin-control-panel" class="pin-control-panel">
+      <button onclick="enterBtn()" class="pin-control-btn" id="pin-ent-btn">ENTER</button>
+      <button onclick="clearInp()" class="pin-control-btn" id="pin-clr-btn">CLEAR</button>
+    </div>
+    <div id="welcome-panel" class="welcome-panel" style="display: none">
+      <h2>WELCOME TO YOUR PORTAL</h2>
+      <p class="info-par">This program is in-development & will turn out to be a helpful multitool!</p>
+    </div>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
