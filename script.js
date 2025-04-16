@@ -43,3 +43,17 @@ function closeWelcomePanel() {
     document.getElementById("close-welcome-panel").style.display = "none";
     MAIN_OPTION_MENU.style.display = "flex";
 }
+
+function calcJot() {
+    document.getElementById("root-container").style.width = "600px";
+    document.getElementById("root-container").style.height = "600px";
+    MAIN_OPTION_MENU.style.display = "none";
+
+    let projectDisplay = document.createElement("iframe");
+    projectDisplay.style.width = "100%";
+    projectDisplay.style.height = "100%";
+    projectDisplay.setAttribute("id", "project-display);
+    projectDisplay.setAttribute("src". calcjot.html);                           
+    WELCOME_PANEL.appendChild(projectDisplay);
+    
+}
