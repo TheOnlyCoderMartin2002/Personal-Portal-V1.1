@@ -18,7 +18,7 @@ function clearInp() {
 
 function enterBtn() {
     if (PIN_ACCESS_INP.value == DEV_PASSKEY) {
-        alert("Passkey has been accepted!");
+        alert("Access has been granted!");
         
         WELCOME_PANEL.style.display = "block";
         
@@ -27,13 +27,8 @@ function enterBtn() {
         NUM_KEY_PANEL.style.display = "none";
         INFO_PAR.style.display = "none";
         PIN_CONTROL_PANEL.style.display = "none";
-    } else if (PIN_ACCESS_INP.length < 4) {
-        alert("Passkey contains less than 4-digits!");
-        clearInp();
-    } else if (PIN_ACCESS_INP.length > 4) {
-        alert("Passkey contains more than 4-digits!");
-        clearInp():
-    }
+    } else {
+        alert("Access has been denied!");
 }
 
 function closeWelcomePanel() {
