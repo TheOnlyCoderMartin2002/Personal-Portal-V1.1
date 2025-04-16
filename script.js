@@ -29,6 +29,7 @@ function enterBtn() {
         PIN_CONTROL_PANEL.style.display = "none";
     } else {
         alert("Access has been denied!");
+    }
 }
 
 function closeWelcomePanel() {
