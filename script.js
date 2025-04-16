@@ -47,7 +47,7 @@ function calcJot() {
     let projectDisplay = document.createElement("iframe");
     projectDisplay.style.width = "100%";
     projectDisplay.style.height = "100%";
-    projectDisplay.setAttribute("id", "project-display);
+    projectDisplay.setAttribute("id", "project-display");
     projectDisplay.setAttribute("src", "CalcJot1.7.html");                           
     WELCOME_PANEL.appendChild(projectDisplay);
     
