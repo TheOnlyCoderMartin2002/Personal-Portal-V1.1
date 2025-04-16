@@ -27,13 +27,12 @@ function enterBtn() {
         NUM_KEY_PANEL.style.display = "none";
         INFO_PAR.style.display = "none";
         PIN_CONTROL_PANEL.style.display = "none";
-    } else {
-        alert("Passkey has been refused!");
+    } else if (PIN_ACCESS_INP.length < 4) {
+        alert("Passkey contains less than 4-digits!");
         clearInp();
-    }
-    if (PIN_ACCESS_INP.value == RAN_PIN) {
-        alert("Bruh.. 1234, reallyyyyy? looool");
-        
+    } else if (PIN_ACCESS_INP.length > 4) {
+        alert("Passkey contains more than 4-digits!");
+        clearInp():
     }
 }
 
