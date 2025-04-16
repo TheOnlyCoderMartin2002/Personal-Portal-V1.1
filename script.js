@@ -44,7 +44,7 @@ function calcJot() {
     document.getElementById("root-container").style.height = "600px";
     MAIN_OPTION_MENU.style.display = "none";
 
-    let projectDisplay = document.createElement("iframe");
+    let projectDisplay = document.createElement("a");
     projectDisplay.style.width = "100%";
     projectDisplay.style.height = "100%";
     projectDisplay.setAttribute("id", "project-display");
