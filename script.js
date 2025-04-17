@@ -27,7 +27,6 @@ function enterBtn() {
         NUM_KEY_PANEL.style.display = "none";
         INFO_PAR.style.display = "none";
         PIN_CONTROL_PANEL.style.display = "none";
-        document.getElementById("logout-panel").style.display = "block";
     } else {
         alert("Access has been denied!");
         clearInp();
@@ -51,6 +50,7 @@ function closeWelcomePanel() {
     document.getElementById("info-par-2").style.display = "none";
     document.getElementById("close-welcome-panel").style.display = "none";
     MAIN_OPTION_MENU.style.display = "flex";
+    document.getElementById("logout-panel").style.display = "block";
 }
 
 function openCalcJot() {
