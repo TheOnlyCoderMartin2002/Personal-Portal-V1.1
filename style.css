@@ -8,6 +8,7 @@ iframe {
   height: 550px;
   display: block;
   margin: auto;
+  border-radius: 8px;
 }
 
 h2 {
