@@ -64,12 +64,15 @@ function closeCalcJot() {
 
 function showPortalInfo() {
     document.getElementById("portal-info-panel").style.display = "block";
+    document.getElementById("root-container").style.height = "400px";
+    document.getElementById("close-portal-info).style.display = "block";
     MAIN_OPTION_MENU.style.display = "none";
 }
 
 function closePortalInfo() {
     document.getElementById("portal-info-panel").style.display = "none";
-    document.getElementById("close-portal-info").style.display = "block";
+    document.getElementById("close-portal-info").style.display = "none";
+    document.getElementById("root-container").style.height = "300px";
     MAIN_OPTION_MENU.style.display = "block";
     document.getElementById("close-info-panel").style.display = "none";
 }
