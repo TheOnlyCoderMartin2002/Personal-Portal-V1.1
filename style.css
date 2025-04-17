@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+iframe {
+  width: 580px;
+  height: fit-content;
+}
+
 h2 {
   font-family: monospace, Arial;
   font-weight: bold;
