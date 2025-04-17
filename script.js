@@ -61,3 +61,17 @@ function closeCalcJot() {
     WELCOME_PANEL.style.height = "95%";
     MAIN_OPTION_MENU.style.display = "flex";
 }
+
+function showPortalInfo() {
+    document.getElementById("portal-info-panel").style.display = "block";
+
+    let closePortalInfo = document.createElement("button");
+    closePortalInfo.innerHTML = "Close Panel";
+    closePortalInfo.setAttribute("class", "pin-access-btn");
+    WELCOME_PANEL.appendChild(closePortalInfo);
+
+    closePortalInfo.onclick = {
+        document.getElementById("portal-info-panel").style.display = "none";
+        closePortalInfo.style.display = "none";
+    }
+}
