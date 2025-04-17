@@ -43,5 +43,17 @@ function openCalcJot() {
     document.getElementById("calc-jot-app").style.display = "flex";
     document.getElementById("root-container").style.width = "600px";
     WELCOME_PANEL.style.width = "580px";
+    WELCOME_PANEL.style.height = "580px";
     MAIN_OPTION_MENU.style.display = "none";
+
+    let closeCalcJot = document.createElement("button");
+    closeCalcJot.innerHTML = "Close Program";
+    closeCalcJot.setAttribute("id", "close-calc-jot");
+    closeCalcJot.setAtttibute("class", "num-btn");
+    document.getElementById("root-container").appendChild(closeCalcJot);
+
+    closeCalcJot.onclick = {
+        document.getElementById("calc-jot-app").style.display = "none";
+        closeCalcJot.style.display = "none";
+    }
 }
