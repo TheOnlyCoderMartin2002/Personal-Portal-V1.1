@@ -64,11 +64,13 @@ function closeCalcJot() {
 
 function showPortalInfo() {
     document.getElementById("portal-info-panel").style.display = "block";
+    document.getElementById("root-container").style.width = "650px";
     document.getElementById("root-container").style.height = "400px";
     document.getElementById("close-portal-info").style.display = "block";
     document.getElementById("close-portal-info").style.margin = "auto";
     document.getElementById("close-portal-info").style.backgroundColor = "red";
     MAIN_OPTION_MENU.style.display = "none";
+    WELCOME_PANEL.style.width = "620px";
     WELCOME_PANEL.style.height = "fit-content";
 }
 
@@ -78,5 +80,6 @@ function closePortalInfo() {
     document.getElementById("root-container").style.height = "300px";
     MAIN_OPTION_MENU.style.display = "flex";
     WELCOME_PANEL.style.height = "95%";
+    WELCOME_PANEL.style.width = "95%";
     document.getElementById("close-info-panel").style.display = "none";
 }
