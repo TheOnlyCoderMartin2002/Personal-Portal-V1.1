@@ -146,9 +146,9 @@ body {
   border: none;
   box-shadow: 2px 2px white;
   border-radius: 10px;
-  width: 120px;
+  width: 100px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
   font-family: monospace, Arial, sans-serif;
 }
