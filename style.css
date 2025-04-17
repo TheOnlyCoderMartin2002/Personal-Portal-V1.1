@@ -6,6 +6,8 @@
 iframe {
   width: 550px;
   height: 550px;
+  display: block;
+  margin: auto;
 }
 
 h2 {
@@ -166,7 +168,7 @@ body {
   text-align: center;
   background-color: darkgoldenrod;
   width: 95%;
-  height: fit-content;
+  height: 95%;
   display: block;
   margin: auto;
   padding: 5px;
