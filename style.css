@@ -149,7 +149,7 @@ body {
   border: none;
   box-shadow: 2px 2px white;
   border-radius: 10px;
-  width: 100px;
+  width: fit-content;
   cursor: pointer;
   font-size: 13px;
   font-weight: bold;
