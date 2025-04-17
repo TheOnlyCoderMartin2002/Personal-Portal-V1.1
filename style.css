@@ -12,16 +12,6 @@ iframe {
   padding: 7px;
 }
 
-blockquote {
-  border-radius: 10px;
-  width: 500px;
-  background-color: black;
-  margin-top: 10px;
-  padding: 12px;
-  margin: auto;
-  display: block;
-}
-
 h2 {
   font-family: monospace, Arial;
   font-weight: bold;
@@ -240,5 +230,5 @@ body {
   font-family: monospace, Arial, sans-serif;
   width: 500px;
   height: fit-content;
-  line-height: 0.1;
+  line-height: 1.6;
 }
