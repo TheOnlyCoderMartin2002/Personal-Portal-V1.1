@@ -69,6 +69,7 @@ function showPortalInfo() {
 
 function closePortalInfo() {
     document.getElementById("portal-info-panel").style.display = "none";
+    document.getElementById("close-portal-info").style.display = "block";
     MAIN_OPTION_MENU.style.display = "block";
     document.getElementById("close-info-panel").style.display = "none";
 }
