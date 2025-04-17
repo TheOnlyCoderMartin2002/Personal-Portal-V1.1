@@ -39,10 +39,11 @@ function logoutPortal() {
     MAIN_OPTION_MENU.style.display = "none";
     PIN_ACCESS_INP.style.display = "block";
     PIN_ACCESS_PANEL.style.display = "block";
-    NUM_KEY_PANEL.style.display = "block";
+    NUM_KEY_PANEL.style.display = "flex";
     INFO_PAR.style.display = "block";
-    PIN_CONTROL_PANEL.style.display = "block";
+    PIN_CONTROL_PANEL.style.display = "flex";
     document.getElementById("logout-portal").style.display = "none";
+    document.getElementById("logout-portal").style.margin = "auto";
 }
 
 function closeWelcomePanel() {
