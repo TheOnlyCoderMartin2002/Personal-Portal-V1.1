@@ -49,7 +49,7 @@ function openCalcJot() {
     let closeCalcJot = document.createElement("button");
     closeCalcJot.innerHTML = "Close Program";
     closeCalcJot.setAttribute("id", "close-calc-jot");
-    closeCalcJot.setAtttibute("class", "num-btn");
+    closeCalcJot.setAttribute("class", "num-btn");
     document.getElementById("root-container").appendChild(closeCalcJot);
 
     closeCalcJot.onclick = {
