@@ -67,12 +67,14 @@ function showPortalInfo() {
     document.getElementById("root-container").style.height = "400px";
     document.getElementById("close-portal-info").style.display = "block";
     MAIN_OPTION_MENU.style.display = "none";
+    WELCOME_PANEL.style.height = "fit-content";
 }
 
 function closePortalInfo() {
     document.getElementById("portal-info-panel").style.display = "none";
     document.getElementById("close-portal-info").style.display = "none";
     document.getElementById("root-container").style.height = "300px";
-    MAIN_OPTION_MENU.style.display = "block";
+    MAIN_OPTION_MENU.style.display = "flex";
+    WELCOME_PANEL.style.height = "95%";
     document.getElementById("close-info-panel").style.display = "none";
 }
