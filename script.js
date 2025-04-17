@@ -29,6 +29,7 @@ function enterBtn() {
         PIN_CONTROL_PANEL.style.display = "none";
     } else {
         alert("Access has been denied!");
+        clearInp();
     }
 }
 
@@ -46,7 +47,7 @@ function openCalcJot() {
     document.getElementById("root-container").style.width = "650px";
     document.getElementById("root-container").style.height = "700px";
     
-    WELCOME_PANEL.style.width = "640px";
+    WELCOME_PANEL.style.width = "620px";
     WELCOME_PANEL.style.height = "fit-content";
     MAIN_OPTION_MENU.style.display = "none";
 }
