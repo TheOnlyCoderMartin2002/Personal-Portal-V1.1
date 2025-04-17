@@ -228,7 +228,7 @@ body {
   font-weight: bold;
   font-size: 18px;
   font-family: monospace, Arial, sans-serif;
-  width: 500px;
+  width: 100%;
   height: fit-content;
-  line-height: 1.6;
+  line-height: 1.4;
 }
