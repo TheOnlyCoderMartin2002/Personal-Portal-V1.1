@@ -36,7 +36,7 @@ body {
 }
 
 .root-container {
-  background-color: darkblue;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +50,7 @@ body {
 }
 
 .pin-access-panel {
-  background-color: blue;
+  background-color: gray;
   padding: 10px;
   margin: auto;
   width: 90%;
@@ -87,7 +87,7 @@ body {
 }
 
 .num-key-panel {
-  background-color: blue;
+  background-color: darkorange;
   display: flex;
   justify-content: center;
   align-items: center;
