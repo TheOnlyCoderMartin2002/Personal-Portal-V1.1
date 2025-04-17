@@ -71,7 +71,7 @@ function showPortalInfo() {
     document.getElementById("close-portal-info").style.backgroundColor = "red";
     MAIN_OPTION_MENU.style.display = "none";
     WELCOME_PANEL.style.width = "620px";
-    WELCOME_PANEL.style.height = "fit-content";
+    WELCOME_PANEL.style.height = "380px";
 }
 
 function closePortalInfo() {
