@@ -30,10 +30,13 @@
         <p class="info-par" id="info-par-2">This program is in-development & will turn out to be a helpful multitool!</p>
         <button onclick="closeWelcomePanel()" id="close-welcome-panel" class="pin-control-btn">CONTINUE >>></button>
         <div id="main-option-menu" class="main-option-menu" style="display: none">
-          <button class="option-block"><a href="calcjot1.7.html">CALC&JOT</a></button><br>
+          <button onclick="openCalcJot()" class="option-block">CALC&JOT</button><br>
           <button class="option-block">MUSIC</button>
           <button class="option-block">PORTAL INFO</button>
-      </div>
+        </div>
+        <iframe src="Calcjot1.7.html" class="calc-jot-app" id="calc-jot-app" style="display: none">
+          
+        </iframe>
       </div>
     </div>
     <div id="pin-control-panel" class="pin-control-panel">
