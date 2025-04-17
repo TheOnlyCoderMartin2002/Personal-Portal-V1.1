@@ -51,4 +51,5 @@ function openCalcJot() {
 
 function closeCalcJot() {
     document.getElementById("calc-jot-app").style.display = "none";
+    document.getElementById("close-calc-jot").style.display = "none";
 }
