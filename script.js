@@ -33,6 +33,10 @@ function enterBtn() {
     }
 }
 
+function logoutPortal() {
+   
+}
+
 function closeWelcomePanel() {
     document.getElementById("h2-1").style.display = "none";
     document.getElementById("info-par-2").style.display = "none";
