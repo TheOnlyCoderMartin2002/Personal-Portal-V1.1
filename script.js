@@ -27,6 +27,7 @@ function enterBtn() {
         NUM_KEY_PANEL.style.display = "none";
         INFO_PAR.style.display = "none";
         PIN_CONTROL_PANEL.style.display = "none";
+        document.getElementById("logout-panel").style.display = "block";
     } else {
         alert("Access has been denied!");
         clearInp();
