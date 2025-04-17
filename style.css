@@ -14,9 +14,10 @@ iframe {
 
 blockquote {
   border-radius: 10px;
-  width: 350px;
+  width: 500px;
   background-color: black;
   margin-top: 10px;
+  padding: 12px;
 }
 
 h2 {
