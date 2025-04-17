@@ -78,6 +78,7 @@ function closePortalInfo() {
     document.getElementById("portal-info-panel").style.display = "none";
     document.getElementById("close-portal-info").style.display = "none";
     document.getElementById("root-container").style.height = "300px";
+    document.getElementById("root-container").style.width = "400px";
     MAIN_OPTION_MENU.style.display = "flex";
     WELCOME_PANEL.style.height = "95%";
     WELCOME_PANEL.style.width = "95%";
