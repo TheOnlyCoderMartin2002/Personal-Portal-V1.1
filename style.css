@@ -12,6 +12,10 @@ iframe {
   padding: 7px;
 }
 
+blockquote {
+  border-radius: 10px;
+}
+
 h2 {
   font-family: monospace, Arial;
   font-weight: bold;
@@ -146,8 +150,8 @@ body {
   border: none;
   box-shadow: 2px 2px white;
   border-radius: 10px;
-  width: 90px;
-  height: 30px;
+  width: 100px;
+  height: fit-content;
   cursor: pointer;
   font-size: 13px;
   font-weight: bold;
