@@ -56,5 +56,7 @@ function closeCalcJot() {
     document.getElementById("close-calc-jot").style.display = "none";
     document.getElementById("root-container").style.width = "400px";
     document.getElementById("root-container").style.height = "300px";
+    WELCOME_PANEL.style.width = "95%";
+    WELCOME_PANEL.style.height = "95%";
     MAIN_OPTION_MENU.style.display = "block";
 }
