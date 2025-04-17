@@ -39,13 +39,7 @@ function closeWelcomePanel() {
     MAIN_OPTION_MENU.style.display = "flex";
 }
 
-function calcJot() {
-    document.getElementById("root-container").style.width = "600px";
-    document.getElementById("root-container").style.height = "600px";
+function openCalcJot() {
+    document.getElementById("calc-jot-app").style.display = "block";
     MAIN_OPTION_MENU.style.display = "none";
-
-    let projectDisplay = document.createElement("iframe");
-    projectDisplay.innerHTML = "Calc & Jot 1.7");
-    projectDisplay.setAttribute("src", "calcjot1.7.html");
-    WELCOME_PANEL.appendChild(projectDisplay);
 }
