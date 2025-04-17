@@ -47,7 +47,7 @@ function openCalcJot() {
     document.getElementById("root-container").style.height = "700px";
     
     WELCOME_PANEL.style.width = "580px";
-    WELCOME_PANEL.style.height = "580px";
+    WELCOME_PANEL.style.height = "fit-content";
     MAIN_OPTION_MENU.style.display = "none";
 }
 
