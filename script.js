@@ -58,5 +58,5 @@ function closeCalcJot() {
     document.getElementById("root-container").style.height = "300px";
     WELCOME_PANEL.style.width = "95%";
     WELCOME_PANEL.style.height = "95%";
-    MAIN_OPTION_MENU.style.display = "block";
+    MAIN_OPTION_MENU.style.display = "flex";
 }
