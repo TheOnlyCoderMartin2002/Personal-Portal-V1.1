@@ -42,8 +42,9 @@ function closeWelcomePanel() {
 function openCalcJot() {
     document.getElementById("calc-jot-app").style.display = "flex";
     document.getElementById("close-calc-jot").style.display = "block";
+    document.getElementById("close-calc-jot").style.margin = "auto";
     document.getElementById("root-container").style.width = "600px";
-    document.getElementById("root-container").style.height = "600px";
+    document.getElementById("root-container").style.height = "700px";
     
     WELCOME_PANEL.style.width = "580px";
     WELCOME_PANEL.style.height = "580px";
