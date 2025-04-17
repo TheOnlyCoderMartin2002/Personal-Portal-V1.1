@@ -19,6 +19,7 @@ blockquote {
   margin-top: 10px;
   padding: 12px;
   margin: auto;
+  display: block;
 }
 
 h2 {
