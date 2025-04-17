@@ -33,16 +33,6 @@ function enterBtn() {
     }
 }
 
-function logoutPortal() {
-    MAIN_OPTION_MENU.style.display = "none";
-    PIN_ACCESS_INP.style.display = "block";
-    PIN_ACCESS_PANEL.style.display = "block";
-    NUM_KEY_PANEL.style.display = "flex";
-    PIN_CONTROL_PANEL.style.display = "block";
-    document.getElementById("logout-portal").style.display = "none";
-    document.getElementById("logout-portal").style.margin = "auto";
-}
-
 function closeWelcomePanel() {
     document.getElementById("h2-1").style.display = "none";
     document.getElementById("info-par-2").style.display = "none";
