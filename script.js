@@ -13,7 +13,7 @@ let PIN_CLR_BTN = document.getElementById("pin-clr-btn");
 let CLOSE_WELCOME_PANEL = document.getElementById("close-welcome-panel");
 
 function clearInp() {
-    PIN_ACCESS_INP.value= "";
+    PIN_ACCESS_INP.value = "";
 }
 
 function enterBtn() {
