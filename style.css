@@ -230,3 +230,15 @@ body {
   color: yellow;
   padding: 12px;
 }
+
+.portal-info-panel {
+  background-color: orange;
+  color: black;
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 18px;
+  font-family: monospace, Arial, sans-serif;
+  width: 500px;
+  height: fit-content;
+  line-height: 0.1;
+}
