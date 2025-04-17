@@ -64,6 +64,7 @@ function closeCalcJot() {
 
 function showPortalInfo() {
     document.getElementById("portal-info-panel").style.display = "block";
+    MAIN_OPTION_MENU.style.display = "none";
 
     let closePortalInfo = document.createElement("button");
     closePortalInfo.innerHTML = "Close Panel";
@@ -73,5 +74,6 @@ function showPortalInfo() {
     closePortalInfo.onclick = {
         document.getElementById("portal-info-panel").style.display = "none";
         closePortalInfo.style.display = "none";
+        MAIN_OPTION_MENU.style.display = "block";
     }
 }
