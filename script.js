@@ -27,6 +27,7 @@ function enterBtn() {
         NUM_KEY_PANEL.style.display = "none";
         INFO_PAR.style.display = "none";
         PIN_CONTROL_PANEL.style.display = "none";
+        clearInp();
     } else {
         alert("Access has been denied!");
         clearInp();
@@ -39,6 +40,7 @@ function closeWelcomePanel() {
     document.getElementById("close-welcome-panel").style.display = "none";
     MAIN_OPTION_MENU.style.display = "flex";
     document.getElementById("logout-panel").style.display = "block";
+    document.getElementById("portal-logout").style.display = "flex";
 }
 
 function openCalcJot() {
@@ -69,7 +71,9 @@ function showPortalInfo() {
     document.getElementById("root-container").style.height = "400px";
     document.getElementById("close-portal-info").style.display = "block";
     document.getElementById("close-portal-info").style.margin = "auto";
-    document.getElementById("close-portal-info").style.backgroundColor = "red";
+    document.getElementById("close-portal-info").style.backgroundColor = "maroon";
+    document.getElementById("close-portal-info").style.color = "aliceblue";
+    document.getElementById("close-portal-info").style.fontWeight = "bold";
     MAIN_OPTION_MENU.style.display = "none";
     WELCOME_PANEL.style.width = "620px";
     WELCOME_PANEL.style.height = "380px";
@@ -85,3 +89,18 @@ function closePortalInfo() {
     WELCOME_PANEL.style.width = "95%";
     document.getElementById("close-info-panel").style.display = "none";
 }
+
+function logoutPortal() {
+    WELCOME_PANEL.style.display = "none";
+    PIN_ACCESS_INP.style.display = "block";
+    PIN_ACCESS_PANEL.style.display = "block";
+    PIN_CONTROL_PANEL.style.display = "flex";
+    NUM_KEY_PANEL.style.display = "flex";
+    INFO_PAR.style.display = "block";
+    alert("Logged out successfully!");
+}
+
+function comingSoon() {
+    alert("The music zone is under developmemt. Coming soon...");
+}
+
