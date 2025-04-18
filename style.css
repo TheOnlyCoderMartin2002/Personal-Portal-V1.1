@@ -35,7 +35,7 @@ h3 {
 }
 
 body {
-  background-color: darkblue;
+  background-image: url("image 2.jpeg");
   padding-top: 100px;
   display: flex;
   justify-content: center;
