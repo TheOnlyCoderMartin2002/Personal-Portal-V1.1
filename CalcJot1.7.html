@@ -5,7 +5,7 @@
     <meta name="description" content="Simple calculator program of my making..">
     <meta name="author" content="Martin Lalus">
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
-    <title>Calc&Jot V1.7</title>
+    <title>Calc&Jot V1.7.1 (modernised)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@ body {
   height: 525px;
   overflow: auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 body::-webkit-scrollbar {
   display: none;
@@ -40,25 +40,24 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 .panel-wrapper {
-  background-color: transparent;
+  background-color: darkblue;
   padding: 20px 20px 10px 20px;
-  width: 400px;
+  width: 500px;
   height: 360px;
   overflow-y: auto;
   border: 5px inset #FAFAD2;
   box-shadow: 6.5px 11.5px;
   border-radius: 12px;
 }
-.panel-wrapper::-webkit-scrollbar {
-  display: none;
-}
+
 .panel-wrapper:hover {
   border: 5px solid #FAFAD2;
-  background-color: darkslategrey;
+  background-color: #89CFF0;
 }
 .top-header {
-  background-color: black;
+  background-color: maroon;
   color: yellow;
+  border: 2px solid snow;
   letter-spacing: 1px;
   font-family: 'Belanosima', monospace, sans-serif;
   font-size: 15px;
@@ -66,34 +65,9 @@ body::-webkit-scrollbar {
   border-radius: 6px;
   border-bottom: 2px solid azure;
 }
-.welcome-mssgs {
-  background-color: black;
-  border-radius: 6.5px;
-  color: azure;
-  padding: 2.5px;
-  width: 170px;
-  height: fit-content;
-  margin-left: 20px;
-  font-family: 'Belanosima', sans-serif;
-}
-.welcome-mssgs, li {
-  list-style-type: none;
-  font-size: 13px;
-  font-style: italic;
-  margin-bottom: 2px;
-}
-li {
-  transition: letter-spacing 0.7s;
-}
-li:hover {
-  border: 1.5px double snow;
-  border-radius: 5px;
-  background-color: red;
-  margin: 0;
-  letter-spacing: 0.3px;
-}
+
 .inputs-wrapper {
-  background-color: transparent;
+  background-color: darkred;
   padding: 15px;
   margin-bottom: 15px;
   border-radius: 25px 10px;
@@ -104,11 +78,12 @@ li:hover {
 }
 .inputs-wrapper:hover {
   border: 5px outset #FAFAD2;
-  background-color: grey;
 }
 .value-input {
-  background-image: linear-gradient(yellow, azure);
+  background-color: red;
   padding: 10px;
+  color: yellow;
+  box-shadow: 2px 2px 2px yellow;
   margin: 8px;
   width: 70px;
   border: none;
@@ -116,11 +91,10 @@ li:hover {
   font-size: 20px;
 }
 .value-input:hover {
-  background-image: linear-gradient(black, azure);
   color: aliceblue;
 }
 .operators-wrapper {
-  background-color: transparent;
+  background-color: darkred;
   padding: 15px;
   margin-bottom: 20px;
   border: 5px inset #FAFAD2;
@@ -129,7 +103,6 @@ li:hover {
 }
 .operators-wrapper:hover {
   border: 5px outset #FAFAD2;
-  background-color:gray;
 }
 .operator {
   background-color: transparent;
@@ -140,15 +113,15 @@ li:hover {
   box-shadow: 2.5px 2.5px;
   font-size: 30px;
   font-family: 'Belanosima', sans-serif;
-  border: 0.9px solid black;
-  border-radius: 32px;
+  border: 1.5px double snow;
+  border-radius: 15px 30px;
   transition: width 0.8s, height 0.8s, background-color 0.8s;
 }
 .operator:hover {
   width: 76px;
   height: 70px;
   padding: 10px;
-  background-color: lightseagreen;
+  background-color: #201408;
   cursor: pointer;
 }
 #ans-btn {
@@ -172,6 +145,7 @@ li:hover {
   font-weight: bold;
   font-family: 'Belanosima', sans-serif;
   border: 3px solid yellow;
+  border-radius: 10px 20px;
 }
 .mark:hover {
   color: yellow;
@@ -179,12 +153,12 @@ li:hover {
   border: 3px solid yellow;
 }
 .note-option {
-  background-color: lightslategrey;
+  background-color: yellow;
   box-shadow: 0;
   border: none;
   border-radius: 12px;
   font-size: 14px;
-  color: gold;
+  color: royalblue;
   text-align: center;
   padding: 10px;
   margin: 5px;
@@ -210,12 +184,18 @@ li:hover {
   height: fit-content;
   margin: 0 auto;
   margin-top: 5px;
-  color: blue;
+  color: yellow;
   margin-bottom: 10px;
   padding: 7.5px;
   transition: padding 0.7s, font-size 0.7s;
   border: none;
   border-radius: 5px;
+}
+.result-panel:hover {
+  color: yellow;
+}
+.result-wrapper {
+  background-color: darkred;
 }
 .result-panel:hover {
   padding: 9.5px;
@@ -227,35 +207,34 @@ li:hover {
 .clear-btn {
   padding: 10px;
   width: 80px;
-  background-color: royalblue;
-  box-shadow: 0;
-  border: none;
+  background-color: yellow;
+  box-shadow: 1px 1px 1px black;
+  border: 2.5px solid black;
   margin: 0 auto;
-  color: yellow;
+  color: royalblue;
   margin-bottom: 16px;
   transition: width 0.7s, box-shadow 0.6s;
 }
 .clear-btn:hover {
   padding: 11px;
   cursor: pointer;
-  width: 120px;
-  box-shadow: 2px 2px 3px snow;
+  width: 90px;
 }
 .extra-content {
   width: 550px;
   height: 470px;
   padding: 0;
-  background-color: transparent;
+  background-color: orange;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 5px solid orange;
+  border: 5px double whitesmoke;
   border-radius: 15px;
   transition: border 0.6s;
 }
 .extra-content:hover {
-  border: 6px solid orange;
+  border: 6px solid snow;
   background-color: darkslategrey;
 }
 .note-panel {
@@ -266,7 +245,7 @@ li:hover {
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px;
-  border: 5px solid orange;
+  border: 5px double whitesmoke;
   transition: border 0.6s;
   overflow: auto;
 
@@ -275,7 +254,7 @@ li:hover {
   display: none;
 }
 .note-panel:hover {
-  border: 6px solid orange;
+  border: 6px solid snow;
 }
 .note-field {
   width: 90%;
@@ -303,17 +282,22 @@ li:hover {
   margin-top: 5px;
   margin-right: 8px;
   margin-bottom: 5px;
+  font-size: 14px;
   font-family: 'Belanosima', monospace, sans-serif;
   font-weight: bold;
   letter-spacing: 1.5px;
   border: none;
+  box-shadow: 3.5px 3.5px 4px whitesmoke;
   border-radius: 5px;
-  background-color: gold;
-  color: black;
+  background-color: darkslateblue;
+  color: gold;
 }
 .note-btn:hover {
   background-color: lightsteelblue;
-  font-size: 14px;
+  color: darkslateblue;
+  font-size: 16px;
+  border: 3.5px solid gold;
+  margin: 1px;
   box-shadow: 2.5px 2.5px 3px lightcyan;
 }
 .note-output {
@@ -321,7 +305,7 @@ li:hover {
   height: 58%;
   overflow-y: auto;
   background-color: black;
-  border: 4.5px solid orange;
+  border: 4.5px double whitesmoke;
   border-radius: 10px;
   transition: border 0.6s;
   color: aliceblue;
@@ -333,7 +317,7 @@ li:hover {
 }
 .note-output:hover {
   opacity: 1;
-  border: 6px solid orange;
+  border: 6px solid snow;
 }
 .note {
   background-color: firebrick;
@@ -346,6 +330,7 @@ li:hover {
   font-family: 'Belanosima', sans-serif;
   overflow-wrap: break-word;
   letter-spacing: 2px;
+  line-height: 1.4;
 }
 .note:hover {
   color: azure;
@@ -364,7 +349,7 @@ li:hover {
   color: orange;
   overflow-wrap: break-word;
   letter-spacing: 2px;
-  line-height: 1.4;
+  line-height: 1.6;
   text-shadow: 1px 1px 1px black;
 }
 .note-2:hover {
@@ -414,21 +399,6 @@ li:hover {
   outline: snow solid 3px;
   opacity: 1;
 }
-.current-operator {
-  text-align: center;
-  text-shadow: 5px 5px 5px gre;
-  font-weight: bold;
-  font-size: 20px;
-  font-family: 'Belanosima', monospace, sans-serif;
-  color: red;
-  padding: 3px;
-  transition: letter-spacing 0.7s;
-}
-.current-operator:hover {
-  letter-spacing: 1px;
-  color: yellow;
-}
-
 .personal-wrapper {
   background-color: #00758F;
   color: #00B2FF;
@@ -520,38 +490,42 @@ strong {
   padding: 6.5px;
 }
 .back-jots-btn {
-  padding: 10px;
-  width: 110px;
-  background-color: royalblue;
+  padding: 5px;
+  width: 100px;
+  background-color: yellow;
   box-shadow: 0;
   border: none;
+  margin-left: 20px;
   margin-top: 13px;
-  color: yellow;
+  color: royalblue;
   margin-bottom: 16px;
   transition: width 0.7s, box-shadow 0.6s;
 }
 .back-jots-btn:hover {
-  padding: 11px;
+  padding: 6.5px;
   cursor: pointer;
-  width: 130px;
+  width: 107px;
   box-shadow: 2px 2px 3px snow;
 }
 
 .dev-notes-key {
   padding: 10px;
   width: 90px;
-  background-color: royalblue;
-  box-shadow: 0;
-  border: none;
+  background-color: yellow;
+  box-shadow: 1px 1px 1px black;
+  border: 2.5px solid black;
   margin: 0 auto;
-  color: yellow;
+  color: royalblue;
   margin-bottom: 16px;
   transition: width 0.7s, box-shadow 0.6s;
+}
+.dev-notes-key:hover {
+  padding: 11.5px;
 }
 .dev-notes-panel {
   width: 95%;
   height: fit-content;
-  padding: 10px;
+  padding: 11.5px;
   background-color: #00758F;
 }
 .function-btns ul li {
@@ -566,16 +540,18 @@ strong {
   color: gold;
 }
 .dev-back-key {
-  background-color: royalblue;
+  background-color: yellow;
+  color: royalblue;
   padding: 10px;
   margin: 3px;
 }
 .dev-back-key:hover {
   color: snow;
   background-color: blue;
+  padding: 11px;
 }
 .result-wrapper {
-  background-color: transparent;
+  background-color: darkred;
   padding: 10px;
   max-height: 200px;
   margin-bottom: 20px;
@@ -619,32 +595,91 @@ strong {
 .note-del:hover {
   font-size: 16px;
 }
+
+.dev-tools-panel {
+  background-color: darkblue;
+  width: 300px;
+  height: fit-content;
+  padding: 20px;
+  text-align: center;
+  border: 3px solid snow;
+  border-radius: 8px;
+  box-shadow: 3.5px 3.5px 4px snow;
+  margin-left: 15px;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.dev-tools-btn {
+  background-color: transparent;
+  border: 2px solid snow;
+  border-radius: 7px;
+  color: snow;
+  padding: 6px;
+  margin: 3px;
+  cursor: pointer;
+}
+.apply-btn {
+  background-color: limegreen;
+  padding: 6px;
+  border-radius: 7px;
+  margin: 3px;
+  cursor: pointer;
+}
+.dev-inp {
+  padding: 5px;
+  border-radius: 7px;
+  margin: 3px;
+  width: 90%;
+}
+.dev-inp:focus {
+  background-color: black;
+  color: yellow;
+  border: none;
+}
+.dev-inp:hover {
+  background-color: black;
+  color: lightcyan;
+  border: none;
+}
+.settings-container {
+  background-color: transparent;
+  border: 1.5px solid snow;
+  border-radius: 7px;
+  padding: 6px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: fit-content;
+  margin: 10px;
+}
 </style>
   </head>
   <body class="light-themes flexbox-styles theme" id="main-screen">
     <section class="panel-wrapper" id="panel-wrapper">
-      <p style="text-align: center; color: yellow; margin-bottom: 8.5px; font-size: 24px; font-family: Arial, Helvetica, sans-serif; text-shadow: 4px 4px 5px red"; title="# Most recent version">Calc & Jot V1.7 (Refurbished)</p>
+      <p id="app-title" style="text-align: center; color: yellow; margin-bottom: 8.5px; font-size: 24px; font-family: Arial, Helvetica, sans-serif; text-shadow: 4px 4px 5px red"; title="# Most recent version">Calc & Jot V1.7.1 (Modernised)</p>
       <div class="inputs-wrapper flexbox-styles" id="inputs-wrapper">
         <div class="top-header" id="top-header">
           
         </div>
-        <ul style="box-shadow: 2.5px 2.5px" class="welcome-mssgs" id="welcome-mssgs">
-          <li>Author: Martin Lalus</li>
-          <li>Calculator Panel</li>
-          <li id="current-time"></li>
-        </ul>
       </div>
       <div class="operators-wrapper flexbox-styles theme" id="operators-wrapper">
         <button class="operator" title="add numbers" id="add"><h4 class="mark">+</h4></button>
         <button class="operator" title="subtract numbers" id="subtract"><h4 class="mark">-</h4></button>
-        <button class="operator" title="multiply numbers" id="multiply"><h4 class="mark">x</h4></button>
-        <button class="operator" title="divide numbers" id="divide"><h4 class="mark">/</h4></button>
+        <button class="operator" title="multiply numbers" id="multiply"><h4 class="mark">×</h4></button>
+        <button class="operator" title="divide numbers" id="divide"><h4 class="mark">÷</h4></button>
+<br>
         <button class="note-option" title="link to Notes" id="xtra">Jots</button>
       </div>
       <div class="function-btns" id="function-btns">
-        <ul>
-          <li><button id="clear-btn" class="clear-btn" style="display: none">Delete</button></li>
-          <li><button id="dev-notes-key" class="dev-notes-key">DEV Notes</button></li>
+        <ul id="function-list">
+          <li><button id="clear-btn" class="clear-btn" style="display: none; border-radius: 7px">Delete</button></li>
+          <li><button id="enlarge-results" class="clear-btn" style="border-radius: 7px;">Enlarge</button></li>
+          <li><button id="dev-notes-key" class="dev-notes-key clear-btn" style="border-radius: 7px;">INFO</button></li>
         </ul>
       </div>
       <div class="result-wrapper" id="result-wrapper">
@@ -663,7 +698,6 @@ strong {
 let inputsSection = document.getElementById("inputs-wrapper");
 let operatorsWrapper = document.getElementById("operators-wrapper");
 let operationOutcome;
-let currentOperator;
 let clearButton = document.getElementById("clear-btn");
 let visitorInfo = prompt("What's your name?... :)");
 let topHeader = document.getElementById("top-header");
@@ -671,35 +705,155 @@ let calcSettingsBtn = document.getElementById("calc-settings-btn");
 let personalWrapper = document.getElementById("personal-wrapper");
 let notePiece = document.getElementById("note");
 let notes = document.getElementsByClassName("note");
-let welcomeMssgs = document.getElementById("welcome-mssgs");
 let noteLogArr = [];
+let enlargeResults = document.getElementById("enlarge-results");
 
-topHeader.innerHTML = "USER \n" + visitorInfo.toUpperCase();
+enlargeResults.onclick = function() {
+  enlargeResults.style.display = "none";
+  document.getElementById("dev-notes-key").style.display = "none";
+  inputsSection.style.display = "none";
+  operatorsWrapper.style.display = "none";
+  document.getElementById("result-wrapper").style.height = "600px";
 
- if (visitorInfo == "") {
-  visitorInfo = "Guest User";
-  topHeader.innerText = visitorInfo.toUpperCase();
-} else {
-  topHeader.innerText = "USER \n" + visitorInfo.toUpperCase();
+  const shrinkResults = document.createElement("button");
+  shrinkResults.innerHTML = "Shrink";
+  shrinkResults.setAttribute("class", "clear-btn");
+  shrinkResults.setAttribute("id", "shrink-results");
+  shrinkResults.style.borderRadius = "7px";                             // shrink result panel
+  shrinkResults.style.marginTop = "10px";
+  document.getElementById("function-list").appendChild(shrinkResults);
+
+  shrinkResults.onclick = function() {
+    shrinkResults.style.display = "none";
+    document.getElementById("dev-notes-key").style.display = "block";
+    enlargeResults.style.display = "block";
+    inputsSection.style.display = "flex";
+    operatorsWrapper.style.display = "flex";
+    document.getElementById("result-wrapper").style.height = "fit-content";
+  }
 }
 
 
-let currentDate = new Date;
-let currentTime = currentDate.getHours() + ":" + currentDate.getMinutes();
 
-document.getElementById("current-time").innerHTML = "Current Time: " + currentTime;
+topHeader.innerHTML = visitorInfo.toUpperCase() + "\n" + "logged in";
+
+if (visitorInfo == "") {
+  visitorInfo = "Guest User";
+  topHeader.innerText = visitorInfo.toUpperCase() + "\n" + "logged in";
+} else if (visitorInfo == "/dev2002ML") {
+    alert("Administrator Mode");
+    topHeader.innerHTML = "Admin User";
+
+    const developerTools = document.createElement("button");
+    developerTools.innerHTML = "Developer Tools";
+    developerTools.setAttribute("class", "clear-btn");
+    developerTools.setAttribute("id", "developer-tools");
+    developerTools.style.backgroundColor = "limegreen";
+    developerTools.style.color = "yellow";
+    developerTools.style.width = "fit-content";
+    developerTools.style.borderRadius = "7px";
+    developerTools.style.marginRight = "13px";
+    document.getElementById("function-list").appendChild(developerTools);
+
+    developerTools.onclick = function() {
+      developerTools.style.display = "none";
+      const devToolsPanel = document.createElement("div");
+      devToolsPanel.innerHTML = "Developer Tools";
+      devToolsPanel.setAttribute("class", "dev-tools-panel");
+      devToolsPanel.setAttribute("id", "dev-tools-panel");
+      devToolsPanel.style.color = "snow";
+      mainScreen.appendChild(devToolsPanel);
+
+      let applyBtn;
+
+      const fontSettingsTool = document.createElement("button");
+      fontSettingsTool.innerHTML = "Font Settings";
+      fontSettingsTool.setAttribute ("class", "dev-tools-btn");
+      fontSettingsTool.setAttribute("id", "font-settings-tool");
+      fontSettingsTool.style.marginTop = "8px";
+      devToolsPanel.appendChild(fontSettingsTool);
+
+      fontSettingsTool.onclick = function() {
+        fontSettingsTool.style.display = "none";
+
+        const container = document.createElement("div");
+        container.innerHTML = "Font Settings";
+        container.setAttribute("class", "settings-container");
+        container.setAttribute("id", "settings-container");
+        container.style.backgroundColor = "red";
+        devToolsPanel.appendChild(container);
+
+        const fontSizeInp = document.createElement("input");
+        fontSizeInp.setAttribute("class", "dev-inp");
+        fontSizeInp.setAttribute("type", "text");
+        fontSizeInp.setAttribute("id", "font-size-inp");
+        fontSizeInp.setAttribute("placeholder", "Text Size - e.g: 16px");
+        container.appendChild(fontSizeInp);
+        
+        const fontColorInp = document.createElement("input");
+        fontColorInp.setAttribute("class", "dev-inp");
+        fontColorInp.setAttribute("type", "text");
+        fontColorInp.setAttribute("id", "font-color-inp");
+        fontColorInp.setAttribute("placeholder", "Text Color - e.g: red");
+        container.appendChild(fontColorInp);
+
+        applyBtn = document.createElement("button");
+        applyBtn.innerHTML = "Apply";
+        applyBtn.setAttribute("class", "apply-btn");
+        applyBtn.setAttribute("id", "apply-btn");
+        container.appendChild(applyBtn);
+
+        applyBtn.onclick = function() {
+          let optionBtns = document.getElementsByClassName("clear-btn");
+
+          for (let op = 0; op < optionBtns.length; op++) {
+            optionBtns[op].style.fontSize = fontSizeInp.value;
+            optionBtns[op].style.color = fontColorInp.value;
+          }
+
+          let backJotsBtn = document.getElementsByClassName("back-jots-btn");
+
+          for (let jb = 0; jb < backJotsBtn.length; jb++) {
+            backJotsBtn[jb].style.fontSize = fontSizeInp.value;
+            backJotsBtn[jb].style.color = fontColorInp.value;
+          }
+
+          let mssgs = document.getElementsByClassName("mssg");
+
+          for (let ms = 0; ms < mssgs.length; ms++) {
+            mssgs[ms].style.fontSize = fontSizeInp.value;
+            mssgs[ms].style.color = fontColorInp.value;
+          }
+
+          topHeader.style.fontSize = fontSizeInp.value;
+          topHeader.style.color = fontColorInp.value;
+          operationOutcome.style.fontSize = fontSizeInp.value;
+          operationOutcome.style.color = fontColorInp.value;
+          currentOperator.style.fontSize = fontSizeInp.value;
+          currentOperator.style.color = fontColorInp.value;
+          document.getElementById("app-title").style.fontSize = fontSizeInp.value;
+        }
+      }
+
+      const backgroundSettings = document.createElement("button");
+      backgroundSettings.innerHTML = "Background Settings";
+      backgroundSettings.setAttribute("class", "dev-tools-btn");
+      backgroundSettings.setAttribute("id", "background-settings");
+      devToolsPanel.appendChild(backgroundSettings);
+
+      
+
+    }
+} else {
+  topHeader.innerText = visitorInfo.toUpperCase() + "\n" + "logged in";
+}
 
 addOperator.addEventListener("click", function() {
-  topHeader.innerHTML = "INPUTS";
+  topHeader.innerHTML = "Add";
   addOperator.style.display = "none";
   subtractOperator.style.display = "none";
   multiplyOperator.style.display = "none";
   divideOperator.style.display = "none";
-  welcomeMssgs.style.display = "none";
-  currentOperator = document.createElement("h2");
-  currentOperator.innerHTML = "Operation In Progress : Addition";
-  currentOperator.setAttribute("class", "current-operator");
-  operatorsWrapper.appendChild(currentOperator);
   xtraButton.style.display = "none";
 
   const addInput1 = document.createElement("input");
@@ -715,19 +869,18 @@ addOperator.addEventListener("click", function() {
   operationOutcome.setAttribute("id", "ans-btn");
   operationOutcome.innerHTML = "ENTER";
   operationOutcome.onclick = function() {
-    topHeader.innerText = "USER: " + visitorInfo;
+    topHeader.innerText = visitorInfo;
     clearButton.style.display = "block";
     addOperator.style.display = "block";
     subtractOperator.style.display = "block";
     multiplyOperator.style.display = "block";
     divideOperator.style.display = "block";
     xtraButton.style.display = "block";
-    welcomeMssgs.style.display = "block";
-    currentOperator.remove();
 
     const resultPanel = document.createElement("div");
     resultPanel.setAttribute("class", "result-panel");
     resultPanel.setAttribute("id", "result-element");
+    resultPanel.style.backgroundColor = "darkred";
     document.getElementById("result-wrapper").appendChild(resultPanel);
     const result = parseInt(addInput1.value) + parseInt(addInput2.value);
     resultPanel.innerHTML = addInput1.value + " + " + addInput2.value + " = " + result;
@@ -739,16 +892,11 @@ addOperator.addEventListener("click", function() {
 });
 
 subtractOperator.addEventListener("click", function() {
-  topHeader.innerText = "INPUTS";
+  topHeader.innerText = "Subtract";
   subtractOperator.style.display = "none";
   addOperator.style.display = "none";
   multiplyOperator.style.display = "none";
   divideOperator.style.display = "none";
-  welcomeMssgs.style.display = "none";
-  currentOperator = document.createElement("h2");
-  currentOperator.textContent = "Operation In Progress : Subtraction";
-  currentOperator.setAttribute("class", "current-operator");
-  operatorsWrapper.appendChild(currentOperator);
   xtraButton.style.display = "none";
 
   const subtractInput1 = document.createElement("input");
@@ -764,7 +912,7 @@ subtractOperator.addEventListener("click", function() {
   operationOutcome.setAttribute("id", "ans-btn");
   operationOutcome.innerHTML = "ENTER";
   operationOutcome.onclick = function() {
-    topHeader.innerText = "USER: " + visitorInfo;
+    topHeader.innerText = visitorInfo;
     clearButton.style.display = "block";
     subtractOperator.style.display = "block";
     addOperator.style.display = "block";
@@ -772,13 +920,12 @@ subtractOperator.addEventListener("click", function() {
     multiplyOperator.style.display = "block";
     divideOperator.style.display = "block";
     xtraButton.style.display = "block";
-    welcomeMssgs.style.display = "block";
-    currentOperator.remove();
 
     const resultPanel = document.createElement("div");
     resultPanel.innerHTML = "Your Result:";
     resultPanel.setAttribute("class", "result-panel");
     resultPanel.setAttribute("id", "result-element");
+    resultPanel.style.backgroundColor = "darkred";
     document.getElementById("result-wrapper").appendChild(resultPanel);
     const result = parseInt(subtractInput1.value) - parseInt(subtractInput2.value);
     resultPanel.innerHTML = subtractInput1.value + " - " + subtractInput2.value + " = " + result;
@@ -790,16 +937,11 @@ subtractOperator.addEventListener("click", function() {
 });
 
 multiplyOperator.addEventListener("click", function() {
-  topHeader.innerText = "INPUTS";
+  topHeader.innerText = "Multiply";
   multiplyOperator.style.display = "none";
   addOperator.style.display = "none";
   subtractOperator.style.display = "none";
   divideOperator.style.display = "none";
-  welcomeMssgs.style.display = "none";
-  currentOperator = document.createElement("h2");
-  currentOperator.textContent = "Operation In Progress : Multiplication";
-  currentOperator.setAttribute("class", "current-operator");
-  operatorsWrapper.appendChild(currentOperator);
   xtraButton.style.display = "none";
 
   const multiplyInput1 = document.createElement("input");
@@ -815,19 +957,19 @@ multiplyOperator.addEventListener("click", function() {
   operationOutcome.setAttribute("id", "ans-btn");
   operationOutcome.innerHTML = "ENTER";
   operationOutcome.onclick = function() {
-    topHeader.innerText = "USER: " + visitorInfo;
+    topHeader.innerText = visitorInfo;
     clearButton.style.display = "block";
     multiplyOperator.style.display = "block";
     addOperator.style.display = "block";
     subtractOperator.style.display = "block";
     divideOperator.style.display = "block";
-    currentOperator.remove();
+
     xtraButton.style.display = "block";
-    welcomeMssgs.style.display = "block";
 
     const resultPanel = document.createElement("div");
     resultPanel.setAttribute("class", "result-panel");
     resultPanel.setAttribute("id", "result-element");
+    resultPanel.style.backgroundColor = "darkred";
     document.getElementById("result-wrapper").appendChild(resultPanel);
     const result = parseInt(multiplyInput1.value) * parseInt(multiplyInput2.value);
     resultPanel.innerHTML = multiplyInput1.value + " x " + multiplyInput2.value + " = " + result;
@@ -839,16 +981,11 @@ multiplyOperator.addEventListener("click", function() {
 });
 
 divideOperator.addEventListener("click", function() {
-  topHeader.innerText = "INPUTS";
+  topHeader.innerText = "Divide";
   divideOperator.style.display = "none";
   addOperator.style.display = "none";
   subtractOperator.style.display = "none";
   multiplyOperator.style.display = "none";
-  welcomeMssgs.style.display = "none";
-  currentOperator = document.createElement("h2");
-  currentOperator.textContent = "Operation In Progress : Division";
-  currentOperator.setAttribute("class", "current-operator");
-  operatorsWrapper.appendChild(currentOperator);
   xtraButton.style.display = "none";
 
   const divideInput1 = document.createElement("input");
@@ -864,19 +1001,18 @@ divideOperator.addEventListener("click", function() {
   operationOutcome.setAttribute("id", "ans-btn");
   operationOutcome.innerHTML = "ENTER";
   operationOutcome.onclick = function() {
-    topHeader.innerText = "USER: " + visitorInfo;
+    topHeader.innerText = visitorInfo;
     clearButton.style.display = "block";
     divideOperator.style.display = "block";
     addOperator.style.display = "block";
     subtractOperator.style.display = "block";
     multiplyOperator.style.display = "block";
-    welcomeMssgs.style.display = "block";
-    currentOperator.remove();
     xtraButton.style.display = "block";
 
     const resultPanel = document.createElement("div");
     resultPanel.setAttribute("class", "result-panel");
     resultPanel.setAttribute("id", "result-element");
+    resultPanel.style.backgroundColor = "darkred";
     document.getElementById("result-wrapper").appendChild(resultPanel);
     const result = parseInt(divideInput1.value) / parseInt(divideInput2.value);
     resultPanel.innerHTML = divideInput1.value + " / " + divideInput2.value + " = " + result;
@@ -888,6 +1024,27 @@ divideOperator.addEventListener("click", function() {
 });
 
 xtraButton.addEventListener("click", function() {
+
+  let timeMssg1 = setTimeout(function() {
+      alert("Run the /themes command " + visitorInfo + " :)");
+
+      note2 = document.createElement("div");
+      note2.innerHTML = "<span>[INFO]</span>: Howdy, " + visitorInfo + " did you know you can change themes? Just run the /themes command :)";
+      note2.setAttribute("class", "note-2");
+      note2.setAttribute("class", "note-del");
+      note2.setAttribute("id", "note");
+      noteOutput.appendChild(note2);
+    }, 5000);
+
+  let timeMssg2 = setTimeout(function() {
+    note2 = document.createElement("div");
+    note2.innerHTML = "<span>[INFO]</span>: To access a list of every available command, just execute /showAllCommands";
+    note2.setAttribute("class", "note-2");
+    note2.setAttribute("class", "note-del");
+    note2.setAttribute("id", "note");
+    noteOutput.appendChild(note2);
+  }, 8000);
+
   xtraButton.remove();
   panelWrapper.style.display = "none";
 
@@ -902,7 +1059,7 @@ xtraButton.addEventListener("click", function() {
   const noteField = document.createElement("textarea");
   noteField.setAttribute("class", "note-field");
   noteField.setAttribute("id", "note-field");
-  noteField.setAttribute("placeholder", "(: Create a Note or Run Commands :)");
+  noteField.setAttribute("placeholder", "Create a Note or Run Commands..");
   notePanel.appendChild(noteField);
 
   const addNote = document.createElement("button");
@@ -919,13 +1076,16 @@ xtraButton.addEventListener("click", function() {
   let note2;
   let note3;
 
-  runBtn.onclick = function() {
+  let runKey = runBtn.onclick = function() {
+
     if (noteField.value == "") {
       note2 = document.createElement("div");
       note2.innerHTML = "[System CMD]: Field contains no command! " + visitorInfo + " :)";
       note2.setAttribute("class", "note-2");
       note2.setAttribute("class", "note-del");
       note2.setAttribute("id", "note");
+
+      alert(visitorInfo + ", no command has been detected!");
       noteOutput.appendChild(note2);
 
     } else if (noteField.value == "/projects") {
@@ -1108,7 +1268,7 @@ xtraButton.addEventListener("click", function() {
         noteOutput.appendChild(counterApp);
       } else if (noteField.value == "/themes") {
         note2 = document.createElement("div");
-        note2.innerHTML = "[System CMD]: Commands Valid! - Available themes are shown below :) <br>";
+        note2.innerHTML = "[System CMD]: Commands Valid, " + visitorInfo + "This is the range of available themes :)" + "<br>";
         note2.setAttribute("class", "note-2");
         note2.setAttribute("class", "note-del");
         note2.setAttribute("id", "note");
@@ -1120,6 +1280,31 @@ xtraButton.addEventListener("click", function() {
         hrline.style.marginTop = "10px";
         hrline.style.marginBottom = "15px";
         note2.appendChild(hrline);
+
+        const themesShortcutBtn = document.createElement("button");
+        themesShortcutBtn.innerHTML = "Themes";
+        themesShortcutBtn.setAttribute("class", "note-btn");
+        themesShortcutBtn.setAttribute("id", "themes-shortcut-btn");
+        notePanel.appendChild(themesShortcutBtn);
+
+        let created = false;
+
+        themesShortcutBtn.onclick = function() {
+          created = true;
+          const hrline = document.createElement("hr");
+          hrline.style.height = "3px";
+          hrline.style.backgroundColor = "azure";
+          hrline.style.marginTop = "10px";
+          hrline.style.marginBottom = "15px";
+          note2.appendChild(hrline);
+
+          noteField.value = "/themes";
+          runKey();
+
+          if (created == true) {
+            themesShortcutBtn.style.display = "none";
+          }
+         }
 
         const theme1 = document.createElement("button");
         theme1.innerHTML = "Red";
@@ -1213,13 +1398,14 @@ xtraButton.addEventListener("click", function() {
         theme4.setAttribute("class", "theme-option");
         theme4.style.backgroundImage = "black";
         theme4.onclick = function() {
-          extraContent.style.backgroundColor = "royalblue";
-          extraContent.style.borderColor = "indigo";
+          mainScreen.style.backgroundColor = "#201408";
+          extraContent.style.backgroundColor = "#201408";
+          extraContent.style.borderColor = "whitesmoke";
           notePanel.style.backgroundColor = "transparent";
           notePanel.style.borderColor = "indigo";
-          noteField.style.borderColor = "indigo";
+          noteField.style.borderColor = "whitesmoke";
           noteOutput.style.backgroundColor = "transparent";
-          noteOutput.style.borderColor = "indigo";
+          noteOutput.style.borderColor = "";
           mainScreen.style.backgroundColor = "darkslategrey";
 
           const noteBtnsArr = document.getElementsByClassName("note-btn");
@@ -1276,10 +1462,6 @@ xtraButton.addEventListener("click", function() {
 
           const noteBtnsArr = document.getElementsByClassName("note-btn");
 
-          for (let nt = 0; nt < noteBtnsArr.length; nt++) {
-            noteBtnsArr[nt].style.borderColor = "orange";
-          }
-
           note2 = document.createElement("div");
           note2.innerHTML = "[System CMD]: The default theme was applied!";
           note2.setAttribute("class", "note-2");
@@ -1288,6 +1470,38 @@ xtraButton.addEventListener("click", function() {
           noteOutput.appendChild(note2);
         }
         note2.appendChild(defaultTheme);
+
+          const theme6 = document.createElement("button");
+          theme6.innerHTML = "Mix / Combine Themes";
+          theme6.setAttribute("class", "theme-option");
+          theme6.onclick = function() {
+            extraContent.style.backgroundColor = "none";
+            extraContent.style.borderColor = "black";
+            notePanel.style.background = "none";
+            notePanel.style.borderColor = "black";
+            noteField.style.backgroundColor = "lightgrey";
+            noteField.style.borderColor = "black";
+            noteField.style.color = "black";
+            noteOutput.style.backgroundColor = "lightgrey";
+            noteOutput.style.color = "black";
+            noteOutput.style.borderColor = "black";
+            mainScreen.style.backgroundColor = "whitesmoke";
+
+            for (let nt2; nt2 < noteBtnsArr.length; nt++) {
+              noteBtnsArr[nt2].style.borderColor = "lightgrey";
+              noteBtnsArr[nt2].style.backgroundColor = "none";
+            }
+
+            note2 = document.createElement("div");
+            note2.innerHTML = "[System CMD]: The Modern theme has been applied.";
+            note2.setAttribute("class", "note-2");
+            note2.setAttribute("class", "note-del");
+            note2.setAttribute("id", "note");
+            noteOutput.appendChild(note2);
+          }
+          note2.appendChild(theme6);
+
+
       } else if (noteField.value == "/powerUpBulbs") {
         notePanel.style.display = "none";
         noteOutput.style.display = "none";
@@ -1358,6 +1572,29 @@ xtraButton.addEventListener("click", function() {
           extraContent.style.display = "flex";
           extraContent.style.justifyContent = "center";
         }
+      } else if (noteField.value == "/castleGame") {
+          note2 = document.createElement("a");
+          note2.innerHTML = 'Play Castle Defence';
+          note2.setAttribute("class", "note-2");
+          note2.setAttribute("id", "note");
+          note2.setAttribute("href", "castle defence.html");
+          note2.style.marginTop = "8px";
+          note2.style.fontSize = "16px";
+          note2.style.fontWeight = "bold";
+          note2.style.fontFamily = "monospace, Verdana, Arial, sans-serif";
+          noteOutput.appendChild(note2);
+      } else if (noteField.value == "/memoryGame") {
+          note2 = document.createElement("a");
+          note2.innerHTML = "Play Memory Game";
+          note2.setAttribute("class", "note-2");
+          note2.setAttribute("class", "note-del");
+          note2.setAttribute("id", "note");
+          note2.setAttribute("href", "index.html");
+          note2.style.marginTop = "8px";
+          note2.style.fontSize = "16px";
+          note2.style.fontWeight = "bold";
+          note2.style.fontFamily = "monospace, Verdana, Arial, sans-serif";
+          noteOutput.appendChild(note2);
       } else if (noteField.value == "/createLock") {
           const response = alert("Command accepted. create your password in the next field");
 
@@ -1410,6 +1647,7 @@ xtraButton.addEventListener("click", function() {
                 lockAppBtn.innerHTML = "Lock App";
                 lockAppBtn.setAttribute("class", "note-btn");
                 lockAppBtn.setAttribute("id", "lock-app-btn");
+                lockAppBtn.style.marginLeft = "1px";
                 notePanel.appendChild(lockAppBtn);
 
                 lockAppBtn.onclick = function() {
@@ -1425,7 +1663,7 @@ xtraButton.addEventListener("click", function() {
 
                     accessBtn.onclick = function() {
                       const response2 = prompt("Enter Your Passkey...");
-                      accessBtn.style.display = "none";
+                      
 
                       if (response2 == savedPassword) {
                         note2.innerHTML = "[System CMD]: --logged in-- Welcome back, " + visitorInfo;
@@ -1452,7 +1690,7 @@ xtraButton.addEventListener("click", function() {
           }
 
       } else if (noteField.value == "/appVersion") {
-          note2.innerHTML = "[System CMD]: This app (calc&jot) has the latest v1.7 update.";
+          note2.innerHTML = "[System CMD]: This app (calc&jot) has the latest v1.7.1 update. This aims to be a modernised version.";
           noteOutput.appendChild(note2);
       } else if (noteField.value == "/clearAll") {
           let Notes = document.querySelectorAll(".note-del");
@@ -1466,9 +1704,10 @@ xtraButton.addEventListener("click", function() {
           alert("Full Screen option is Unlocked!");
 
           const regularScreenBtn = document.createElement("button");
-          regularScreenBtn.innerHTML = "Shrink Panel";
+          regularScreenBtn.innerHTML = "Shrink";
           regularScreenBtn.setAttribute("class", "note-btn");
           regularScreenBtn.style.marginTop = "2px";
+          regularScreenBtn.style.borderRadius = "7px";
           extraContent.appendChild(regularScreenBtn);
 
           regularScreenBtn.onclick = function() {
@@ -1477,8 +1716,9 @@ xtraButton.addEventListener("click", function() {
              notePanel.style.display = "block";
 
              const fullScreenBtn = document.createElement("button");
-             fullScreenBtn.innerHTML = "Enlarge Panel";
+             fullScreenBtn.innerHTML = "Enlarge";
              fullScreenBtn.setAttribute("class", "note-btn");
+             fullScreenBtn.style.marginRight = "8px";
              notePanel.appendChild(fullScreenBtn);
 
              fullScreenBtn.onclick = function() {
@@ -1487,14 +1727,14 @@ xtraButton.addEventListener("click", function() {
               noteOutput.style.height = "85%";
 
               const regularScreenBtn = document.createElement("button");
-              regularScreenBtn.innerHTML = "Shrink Panel";
+              regularScreenBtn.innerHTML = "Shrink";
               regularScreenBtn.setAttribute("class", "note-btn");
               regularScreenBtn.style.marginTop = "2px";
               extraContent.appendChild(regularScreenBtn);
 
               regularScreenBtn.onclick = function() {
                 regularScreenBtn.style.display = "none";
-                fullScreenBtn.style.display = "block";
+                fullScreenBtn.style.display = "inline-flex";
                 fullScreenBtn.style.margin = "0 auto";
                 noteOutput.style.height = "58%";
                 notePanel.style.display = "block";
@@ -1549,12 +1789,26 @@ xtraButton.addEventListener("click", function() {
   const deleteNote = document.createElement("button");
   deleteNote.innerHTML = "Delete Jot";
   deleteNote.setAttribute("class", "note-btn");
-  deleteNote.setAttribute("title", "delete a note");
+  deleteNote.setAttribute("title", "clear single jot");
   notePanel.appendChild(deleteNote);
 
   deleteNote.onclick = function() {
       const result = document.getElementById("note");
       result.remove();
+  }
+
+  const deleteNotes = document.createElement("button");
+  deleteNotes.innerHTML = "Clear All";
+  deleteNotes.setAttribute("class", "note-btn");
+  deleteNotes.setAttribute("title", "clear all jots");
+  notePanel.appendChild(deleteNotes);
+
+  deleteNotes.onclick = function() {
+    let Notes = document.querySelectorAll(".note-del");
+
+    Notes.forEach(Note => {
+      Note.remove();
+    });
   }
 
   const noteOutput = document.createElement("div");
@@ -1602,6 +1856,68 @@ xtraButton.addEventListener("click", function() {
   noteLogArr.push(note2);
   noteOutput.appendChild(note2);
 
+  note2 = document.createElement("div");
+  note2.innerHTML = "<strong><em>Developer</em></strong> Update 1.7.1 (modernised version) introduces a lot more helpful commands & tools even improvemets to visibility & navigation. It's now possible to set up a passkey and lock your app.";
+  note2.setAttribute("class", "note-2");
+  note2.setAttribute("class", "note-del");
+  note2.setAttribute("id", "note");
+  note2.style.backgroundColor = "transparent";
+  note2.style.color = "lightcyan";
+  noteLogArr.push(note2);
+  noteOutput.appendChild(note2);
+
+  notePanel.style.display = "none";
+          noteOutput.style.height = "85%";
+
+          const regularScreenBtn = document.createElement("button");
+          regularScreenBtn.innerHTML = "Shrink";
+          regularScreenBtn.setAttribute("class", "note-btn");
+          regularScreenBtn.style.marginTop = "2px";
+          extraContent.appendChild(regularScreenBtn);
+
+          regularScreenBtn.onclick = function() {
+             regularScreenBtn.style.display = "none";
+             noteOutput.style.height = "58%";
+             notePanel.style.display = "block";
+
+             const fullScreenBtn = document.createElement("button");
+             fullScreenBtn.innerHTML = "Enlarge";
+             fullScreenBtn.setAttribute("class", "note-btn");
+             note2.appendChild(fullScreenBtn);
+
+             fullScreenBtn.onclick = function() {
+              fullScreenBtn.style.display = "none";
+              notePanel.style.display = "none";
+              noteOutput.style.height = "85%";
+
+              const regularScreenBtn = document.createElement("button");
+              regularScreenBtn.innerHTML = "Shrink";
+              regularScreenBtn.setAttribute("class", "note-btn");
+              regularScreenBtn.style.marginTop = "2px";
+              regularScreenBtn.style.borderRadius = "7px";
+              extraContent.appendChild(regularScreenBtn);
+
+              regularScreenBtn.onclick = function() {
+                regularScreenBtn.style.display = "none";
+                fullScreenBtn.style.display = "block";
+                fullScreenBtn.style.margin = "0 auto";
+                noteOutput.style.height = "58%";
+                notePanel.style.display = "block";
+              }
+             }
+            }
+       
+            note2 = document.createElement("div");
+  note2.innerHTML = "<strong><em>Developer</em></strong> Try out the new panel expansion feature!" + "<em>To unlock the enlarge key execute <span>/fullScreen</span> :) </em>" + "<br>";
+  note2.setAttribute("class", "note-2");
+  note2.setAttribute("class", "note-del");
+  note2.setAttribute("id", "note");
+  note2.style.backgroundColor = "transparent";
+  note2.style.color = "lightcyan";
+  noteLogArr.push(note2);
+  noteOutput.appendChild(note2);
+
+
   const returnBtn = document.createElement("button");
   returnBtn.innerHTML = "Home";
   returnBtn.setAttribute("class", "note-btn");
@@ -1609,15 +1925,17 @@ xtraButton.addEventListener("click", function() {
   notePanel.appendChild(returnBtn);
 
   returnBtn.onclick = function() {
+
     extraContent.style.display = "none";
     panelWrapper.style.display = "block";
-    welcomeMssgs.style.display = "none";
 
     const returnBtn3 = document.createElement("button");
-    returnBtn3.innerHTML = "Back to Jots";
+    returnBtn3.innerHTML = "Jots (home)";
     returnBtn3.setAttribute("class", "back-jots-btn");
     returnBtn3.setAttribute("id", "back-jots-btn");
-    mainScreen.appendChild(returnBtn3);
+    returnBtn3.style.margin = "0 auto";
+    returnBtn3.style.marginLeft = "8.5px";
+    operatorsWrapper.appendChild(returnBtn3);                  // jots home btn
 
     returnBtn3.onclick = function() {
       returnBtn3.style.display = "none";
@@ -1646,6 +1964,7 @@ clearButton.addEventListener("click", function() { // clear function
 document.getElementById("dev-notes-key").onclick = function() {
   document.getElementById("dev-notes-key").style.display = "none";
   document.getElementById("clear-btn").style.display = "none";
+  document.getElementById("enlarge-results").style.display = "none";
   document.getElementById("result-wrapper").style.maxHeight = "100px";
   inputsSection.style.display = "none";
   operatorsWrapper.style.display = "none";
@@ -1663,6 +1982,7 @@ document.getElementById("dev-notes-key").onclick = function() {
 
   devNotesBackKey.onclick = function() {
     devNotesBackKey.style.display = "none";
+    document.getElementById("enlarge-results").style.display = "block";
     devNotesPanel.style.display = "none";
     document.getElementById("dev-notes-key").style.display = "block";
     document.getElementById("clear-btn").style.display = "block";
@@ -1680,6 +2000,11 @@ document.getElementById("dev-notes-key").onclick = function() {
   para2.innerHTML = "- Backdoors for developer were introduced." + "<br>" + "- It's now possible to expand the jot output panel!";
   para2.setAttribute("class", "dev-note");
   devNotesPanel.appendChild(para2);
+
+  const para3 = document.createElement("p");
+  para3.innerHTML = "- Update 1.7.1 (modernised version brings along further improvements to navigation, new functions & commands to experiment with! It's possible now to unlock the screen enlarging feature and app lock.";
+  para3.setAttribute("class", "dev-note");
+  devNotesPanel.appendChild(para3);
 }
 
 // version 1.2:
