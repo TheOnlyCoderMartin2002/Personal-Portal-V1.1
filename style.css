@@ -42,6 +42,14 @@ h3 {
   color: #FFC300;
 }
 
+h4 {
+  font-size: 18px;
+  font-family: monospace, Arial;
+  font-weight: bold;
+  color: aliceblue;
+  margin: 5px;
+}
+
 body {
   background-color: darkblue;
   padding-top: 100px;
@@ -165,7 +173,7 @@ body {
   padding: 7px;
   color: whitesmoke;
   border: none;
-  margin: 10px 5px 10px 5px;
+  margin: 5px 5px 10px 5px;
   box-shadow: 2px 2px white;
   border-radius: 10px;
   width: fit-content;
@@ -262,4 +270,28 @@ body {
 #delete-digit-btn {
   width: 30px;
   height: 30px;
+}
+
+.personal-music-panel {
+  background-color: darkblue;
+  width: 92%;
+  height: 92%;
+  margin: auto;
+  padding: 15px 10px 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  box-shadow: 1.5px 1.5px aliceblue;
+  border: 1.5px solid aliceblue;
+  border-radius: 12px;
+  flex-flow: start;
+  overflow: scroll;
+}
+
+audio {
+  width: 300px;
+  height: 40px;
+  margin: 5px 0 5px 0;
 }
