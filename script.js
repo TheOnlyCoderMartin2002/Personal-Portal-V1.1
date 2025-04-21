@@ -53,6 +53,7 @@ function openCalcJot() {
     document.getElementById("calc-jot-app").style.display = "flex";
     document.getElementById("close-calc-jot").style.display = "block";
     document.getElementById("close-calc-jot").style.margin = "auto";
+    document.getElementById("br-1").style.display = "block";
     document.getElementById("root-container").style.width = "650px";
     document.getElementById("root-container").style.height = "700px";
     
@@ -64,6 +65,7 @@ function openCalcJot() {
 function closeCalcJot() {
     document.getElementById("calc-jot-app").style.display = "none";
     document.getElementById("close-calc-jot").style.display = "none";
+    document.getElementById("br-1").style.display = "none";
     document.getElementById("root-container").style.width = "400px";
     document.getElementById("root-container").style.height = "300px";
     WELCOME_PANEL.style.width = "95%";
@@ -107,7 +109,15 @@ function logoutPortal() {
     console.log("Logged out successfully!");
 }
 
-function comingSoon() {
-    alert("The music zone is under developmemt. Coming soon...");
+function showMusicPanel() {
+    MAIN_OPTION_MENU.style.display = "none";
+    document.getElementById("personal-music-panel").style.display = "block";
+    document.getElementById("close-music-panel").style.display = "flex";
+}
+
+function closeMusicPanel() {
+    MAIN_OPTION_MENU.style.display = "flex";
+    document.getElementById("personal-music-panel").style.display = "none";
+    document.getElementById("close-music-panel").style.display = "none";
 }
 
