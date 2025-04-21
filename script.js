@@ -12,13 +12,16 @@ let PIN_CLR_BTN = document.getElementById("pin-clr-btn");
 
 let CLOSE_WELCOME_PANEL = document.getElementById("close-welcome-panel");
 
+
 function clearInp() {
     PIN_ACCESS_INP.value = "";
 }
 
 function enterBtn() {
     if (PIN_ACCESS_INP.value == DEV_PASSKEY) {
-        alert("Access has been granted!");
+        alert("|LOGIN SUCCESSFUL|");
+        console.log("PASSKEY ACCEPTED");
+        console.log("LOGGED IN SUCCESSFULLY!");
         
         WELCOME_PANEL.style.display = "block";
         
@@ -29,7 +32,9 @@ function enterBtn() {
         PIN_CONTROL_PANEL.style.display = "none";
         clearInp();
     } else {
-        alert("Access has been denied!");
+        alert("LOGIN UNSUCCESSFUL");
+        console.log("PASSKEY REJECTED")
+        console.log("The passkey is inocorrect, not long enough or abscent!");
         clearInp();
     }
 }
@@ -37,6 +42,7 @@ function enterBtn() {
 function closeWelcomePanel() {
     document.getElementById("h2-1").style.display = "none";
     document.getElementById("info-par-2").style.display = "none";
+    document.getElementById("info-par-3").style.display = "none";
     document.getElementById("close-welcome-panel").style.display = "none";
     MAIN_OPTION_MENU.style.display = "flex";
     document.getElementById("logout-panel").style.display = "block";
@@ -98,6 +104,7 @@ function logoutPortal() {
     NUM_KEY_PANEL.style.display = "flex";
     INFO_PAR.style.display = "block";
     alert("Logged out successfully!");
+    console.log("Logged out successfully!");
 }
 
 function comingSoon() {
